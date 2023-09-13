@@ -60,7 +60,8 @@ Default input stream & output stream is the terminal
 
 ## Exercise
 
-1. 
-![Screenshot 2023-09-13 at 13.18.48](https://github.com/fan2goa1/CS_Notes/blob/main/image/Screenshot%202023-09-13%20at%2013.18.48.png?raw=true)
+1. For this course, you need to be using a Unix shell like Bash or ZSH. If you are on Linux or macOS, you don’t have to do anything special. If you are on Windows, you need to make sure you are not running cmd.exe or PowerShell; you can use Windows Subsystem for Linux or a Linux virtual machine to use Unix-style command-line tools. To make sure you’re running an appropriate shell, you can try the command ```echo $SHELL```. If it says something like ```/bin/bash``` or ```/usr/bin/zsh```, that means you’re running the right program.
+<img width="461" alt="Screenshot 2023-09-13 at 13 18 48" src="https://github.com/fan2goa1/CS_Notes/assets/31031356/b220d399-c38d-49fb-ad9f-31a6be3c230d">
 
-2. 234
+2. Create a new directory called ```missing``` under ```/tmp```.
+
