@@ -60,4 +60,7 @@ Default input stream & output stream is the terminal
 
 ## Exercise
 
-1. ![Screenshot 2023-09-13 at 13.18.48](./image/Screenshot 2023-09-13 at 13.18.48.png)
+1. 
+![Screenshot 2023-09-13 at 13.18.48](https://github.com/fan2goa1/CS_Notes/blob/main/image/Screenshot%202023-09-13%20at%2013.18.48.png?raw=true)
+
+2. 234
