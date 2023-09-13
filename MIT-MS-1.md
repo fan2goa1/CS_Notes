@@ -64,4 +64,38 @@ Default input stream & output stream is the terminal
 <img width="461" alt="Screenshot 2023-09-13 at 13 18 48" src="https://github.com/fan2goa1/CS_Notes/assets/31031356/b220d399-c38d-49fb-ad9f-31a6be3c230d">
 
 2. Create a new directory called ```missing``` under ```/tmp```.
+<img width="732" alt="2" src="https://github.com/fan2goa1/CS_Notes/assets/31031356/a881904d-f176-445f-b755-ad38c1be7240">
+
+3. Look up the ```touch``` program. The ```man``` program is your friend.
+<img width="728" alt="3" src="https://github.com/fan2goa1/CS_Notes/assets/31031356/00e146a2-7ba6-4c4e-8e7b-ed47d991a07b">
+
+4. Use ```touch``` to create a new file called ```semester``` in ```missing```.
+<img width="728" alt="4" src="https://github.com/fan2goa1/CS_Notes/assets/31031356/6eb0f2b9-81ee-4994-a50a-866aac9b570e">
+
+5. Write the following into that file, one line at a time:
+```
+#!/bin/sh
+curl --head --silent https://missing.csail.mit.edu
+```
+<img width="731" alt="5" src="https://github.com/fan2goa1/CS_Notes/assets/31031356/2a7d862b-9ab1-43c6-8550-1b35eaf9ad7e">
+
+6. Try to execute the file, i.e. type the path to the script (```./semester```) into your shell and press enter. Understand why it doesn’t work by consulting the output of ```ls``` (hint: look at the permission bits of the file).
+<img width="730" alt="6" src="https://github.com/fan2goa1/CS_Notes/assets/31031356/3ee9a260-77fe-4d78-8a6d-4de1cb8c74d8">
+
+7. Run the command by explicitly starting the sh interpreter, and giving it the file ```semester``` as the first argument, i.e. ```sh semester```. Why does this work, while ```./semester``` didn’t?
+<img width="731" alt="7" src="https://github.com/fan2goa1/CS_Notes/assets/31031356/eed03c15-6761-4595-a57b-155d73e7737d">
+
+8. Look up the ```chmod``` program (e.g. use ```man chmod```).
+<img width="734" alt="8" src="https://github.com/fan2goa1/CS_Notes/assets/31031356/e1d6d143-17e0-4528-ad2c-b229c854356c">
+
+9. Use ```chmod``` to make it possible to run the command ```./semester``` rather than having to type ```sh semester```. 
+<img width="728" alt="9" src="https://github.com/fan2goa1/CS_Notes/assets/31031356/2c875b2c-3d3f-49c2-ae30-7d8b8f3b442f">
+
+10. Use ```|``` and ```>``` to write the “last modified” date output by ```semester``` into a file called ```last-modified.txt``` in your home directory.
+<img width="731" alt="10" src="https://github.com/fan2goa1/CS_Notes/assets/31031356/2f038577-b612-42cb-a310-8b60d6723cde">
+
+11. Write a command that reads out your laptop battery’s power level or your desktop machine’s CPU temperature from ```/sys```. Note: if you’re a macOS user, your OS doesn’t have sysfs, so you can skip this exercise.
+
+
+
 
