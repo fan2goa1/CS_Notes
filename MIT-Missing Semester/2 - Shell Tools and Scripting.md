@@ -31,3 +31,5 @@
 
 #### 进程替换 process substitution
 ```cat <(ls) <(ls ..)``` 的作用是将上一层目录的内容存在一个临时文件中，将当前目录的内容存在一个临时文件中，然后将file handle交给cat命令，拼接后输出。所以得到的内容是当前目录和上一级目录的内容。
+
+## A example .sh file
