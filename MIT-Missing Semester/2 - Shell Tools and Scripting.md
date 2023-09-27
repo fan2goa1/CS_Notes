@@ -33,3 +33,22 @@
 ```cat <(ls) <(ls ..)``` 的作用是将上一层目录的内容存在一个临时文件中，将当前目录的内容存在一个临时文件中，然后将file handle交给cat命令，拼接后输出。所以得到的内容是当前目录和上一级目录的内容。
 
 ## A example .sh file
+```bash
+#!/bin/bash
+echo "Starting program at $(date)" # Date will be substituted
+
+echo "Running program $0 with $# arguments with pid $$"
+
+for file in "$@"; do
+  grep foobar "$file" ? /dev/null 2> /dev/null
+  # When pattern is not found, grep has exit status
+  # We redirect STDOUT and STDERR to a null register place
+
+  if [["$?" -ne 0]]; then
+    echo "File $file does not have any foobar, adding one"
+    echo "# foobar" >> "$file"
+  fi
+done
+```
+
+The program above is to find the word "foobar" in those files, and if a file don't contain "foobar", then add "# foobar" to the end of the file.
