@@ -84,3 +84,16 @@ for arg in reversed(sys.argv[1:]):
 
 ## Some Trivial Things
 可以使用```tldr```去查看一些命令的使用例子，它不像```man```命令列出了所有文档内容，而是举例形式给出。
+
+## Exercises
+1. Read ```man ls``` and write an ```ls``` command that lists files in the following manner
+- Includes all files, including hidden files
+- Sizes are listed in human readable format (e.g. 454M instead of 454279954)
+- Files are ordered by recency
+- Output is colorized
+
+**Sol.**
+  For including hidden files, we can use ```-a```. For human readable format-size, we can use ```-h```. For files ordered by recency, use ```-t```. For output is colorized, use ```--color=auto```.
+ 
+  <img width="699" alt="Screenshot 2023-09-29 at 04 33 53" src="https://github.com/fan2goa1/CS_Notes/assets/31031356/92e36210-15e5-477f-9a37-c478aeb2c2ac">
+
