@@ -45,8 +45,11 @@
 
 ```fd```命令用正则表达式来搜索相关内容。
 
-### Shellcheck
+### Shellcheck 分析脚本语法错误
 ```shellcheck```可以帮助分析shell脚本中的语法错误等。
+
+### 目录结构
+显示目录结构可以使用```tree```, ```broot```等命令。
 
 ## An example .sh script
 ```bash
