@@ -97,6 +97,7 @@ for arg in reversed(sys.argv[1:]):
  
   <img width="699" alt="Screenshot 2023-09-29 at 04 33 53" src="https://github.com/fan2goa1/CS_Notes/assets/31031356/92e36210-15e5-477f-9a37-c478aeb2c2ac">
 
+
 2. Write bash functions ```marco``` and ```polo``` that do the following. Whenever you execute ```marco``` the current working directory should be saved in some manner, then when you execute ```polo```, no matter what directory you are in, ```polo``` should cd you back to the directory where you executed ```marco```. For ease of debugging you can write the code in a file ```marco.sh``` and (re)load the definitions to your shell by executing ```source marco.sh```.
 
 **Sol.**
