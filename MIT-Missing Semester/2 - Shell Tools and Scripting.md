@@ -25,7 +25,7 @@
 
 ### 替换 Substitution
 #### 命令替换
-```foo=$(pwd)``` 会将pwd得到的输出(也就是当前路径)存储到变量foo中。
+```foo=$(pwd)``` 会将pwd得到的输出(也就是当前路径)存储到变量foo中。至于$(pwd)，相当于创建了子shell执行命令pwd。
 
 ```echo "we are at $(pwd)"``` (**注意是双引号**)会输出we are at [当前路径]。
 
@@ -96,4 +96,8 @@ for arg in reversed(sys.argv[1:]):
   For including hidden files, we can use ```-a```. For human readable format-size, we can use ```-h```. For files ordered by recency, use ```-t```. For output is colorized, use ```--color=auto```.
  
   <img width="699" alt="Screenshot 2023-09-29 at 04 33 53" src="https://github.com/fan2goa1/CS_Notes/assets/31031356/92e36210-15e5-477f-9a37-c478aeb2c2ac">
+
+2. Write bash functions ```marco``` and ```polo``` that do the following. Whenever you execute ```marco``` the current working directory should be saved in some manner, then when you execute ```polo```, no matter what directory you are in, ```polo``` should cd you back to the directory where you executed ```marco```. For ease of debugging you can write the code in a file ```marco.sh``` and (re)load the definitions to your shell by executing ```source marco.sh```.
+
+**Sol.**
 
