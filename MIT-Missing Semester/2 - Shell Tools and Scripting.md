@@ -101,4 +101,36 @@ for arg in reversed(sys.argv[1:]):
 2. Write bash functions ```marco``` and ```polo``` that do the following. Whenever you execute ```marco``` the current working directory should be saved in some manner, then when you execute ```polo```, no matter what directory you are in, ```polo``` should cd you back to the directory where you executed ```marco```. For ease of debugging you can write the code in a file ```marco.sh``` and (re)load the definitions to your shell by executing ```source marco.sh```.
 
 **Sol.**
+  First, we need to use redirection to write down our current path. And in ```polo```, we invoke the file which contain out record of the path and use ```cd``` to enter it. Here's the bash code.
+
+```bash
+#!/bin/bash
+marco(){
+    echo "$(pwd)" > $HOME/Desktop/MIT-Missing/marco.log
+    echo "save pwd $(pwd)"
+}
+
+polo(){
+    echo "$HOME/Desktop/MIT-Missing/marco.log"
+    cd "$(cat "$HOME/Desktop/MIT-Missing/marco.log")"
+}
+```
+
+3. Say you have a command that fails rarely. In order to debug it you need to capture its output but it can be time consuming to get a failure run. Write a bash script that runs the following script until it fails and captures its standard output and error streams to files and prints everything at the end. Bonus points if you can also report how many runs it took for the script to fail.
+
+```bash
+ #!/usr/bin/env bash
+
+ n=$(( RANDOM % 100 ))
+
+ if [[ n -eq 42 ]]; then
+    echo "Something went wrong"
+    >&2 echo "The error was using magic numbers"
+    exit 1
+ fi
+
+ echo "Everything went according to plan"
+```
+
+**Sol.**
 
