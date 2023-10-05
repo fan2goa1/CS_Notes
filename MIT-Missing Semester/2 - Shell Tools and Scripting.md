@@ -133,4 +133,22 @@ polo(){
 ```
 
 **Sol.**
+We need to write a script to detect when the bugger.sh produce error. So the first step we write down ```echo bugger.sh >> bug_detect.log``` in the loops. ```> bug_detect.log``` is used for redirecting the output stream.
 
+Moreover, we need to detect whether the bugger's execution in this iteration has finished correctly, that is, return 0. Use ```$?``` to get the return value.
+
+Below is the answer.
+```bash
+#!/bin/bash
+
+echo > bug_detect.log
+
+for ((count = 0; ; count ++))
+do
+    ./buggy.sh >> bug_detect.log
+    if [[ $? -ne 0 ]]; then
+        echo "The script failed after $count iterations."
+        break
+    fi
+done
+```
